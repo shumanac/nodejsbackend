@@ -2,7 +2,7 @@ const db = require('../../config/db');
 var ObjectID = require('mongodb').ObjectID;
 
 
-// To read the wish list 
+// To read the wish list by id
 module.exports = function (app, db) {
 	app.get('/wishlist/:id', (req, res) => {
 		const id = req.params.id;
@@ -38,7 +38,7 @@ module.exports = function (app, db) {
 			}
 		});
 	});
-	//To delete the wish list
+	//To delete the wish list by id
 	app.delete('/wishlistremove/:id', (req, res) => {
 		const id = req.params.id;
 		const details = {
@@ -55,7 +55,7 @@ module.exports = function (app, db) {
 		});
 	});
 
-	//To update the wish list
+	//To update the wish list by id
 	app.put('/wishlistedit/:id', (req, res) => {
 		const id = req.params.id;
 		const details = {

@@ -13,7 +13,7 @@ var requestListener = function (request, response) {
 	response.end('Hello You\n');
 }
 var server = http.createServer(requestListener);
-//server.listen(8000);
+
 
 const port = process.env.PORT || 1337;
 const db = require('./config/db');
